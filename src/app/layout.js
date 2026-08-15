@@ -2,6 +2,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import About from "./about/page";
+import Skills from "./skills/page";
+import Projects from "./projects/page";
+import Contact from "./contact/page";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +31,10 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <Navbar />
          {children}  {/*Next.js automatically puts page.js's content HERE */}
-        <About/>
+        <About />
+        <Skills />
+        <Projects />
+        <Contact/>
       </body>
     </html>
   );
